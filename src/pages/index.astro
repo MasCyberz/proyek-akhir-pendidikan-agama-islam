@@ -1,0 +1,1139 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const questions = [
+   {
+      question: "Saat tugas kelompok mendekati deadline dan tim mulai panik...",
+      options: [
+         {
+            text: "Saya memastikan semua anggota tetap jujur terhadap progres yang sebenarnya.",
+            type: "SIDDIQ",
+         },
+         {
+            text: "Saya mengambil tanggung jawab untuk memastikan tugas selesai tepat waktu.",
+            type: "AMANAH",
+         },
+         {
+            text: "Saya menyusun strategi baru agar pekerjaan lebih efisien.",
+            type: "FATHANAH",
+         },
+         {
+            text: "Saya mengomunikasikan solusi dan menenangkan tim.",
+            type: "TABLIGH",
+         },
+      ],
+   },
+   {
+      question: "Ketika terjadi konflik di dalam tim...",
+      options: [
+         {
+            text: "Saya berusaha mencari fakta yang sebenarnya terlebih dahulu.",
+            type: "SIDDIQ",
+         },
+         {
+            text: "Saya memastikan semua pihak diperlakukan dengan adil.",
+            type: "AMANAH",
+         },
+         {
+            text: "Saya mencari akar masalah dan solusi jangka panjang.",
+            type: "FATHANAH",
+         },
+         {
+            text: "Saya memfasilitasi dialog agar semua pihak saling memahami.",
+            type: "TABLIGH",
+         },
+      ],
+   },
+   {
+      question: "Saat organisasi menghadapi masalah besar...",
+      options: [
+         {
+            text: "Saya tetap memegang prinsip meskipun situasi sulit.",
+            type: "SIDDIQ",
+         },
+         {
+            text: "Saya merasa bertanggung jawab menjaga kepercayaan tim.",
+            type: "AMANAH",
+         },
+         {
+            text: "Saya membuat beberapa skenario dan rencana cadangan.",
+            type: "FATHANAH",
+         },
+         {
+            text: "Saya menjaga semangat tim melalui komunikasi yang positif.",
+            type: "TABLIGH",
+         },
+      ],
+   },
+   {
+      question: "Ketika mendapatkan kritik dari anggota tim...",
+      options: [
+         {
+            text: "Saya mengevaluasi apakah kritik tersebut sesuai fakta.",
+            type: "SIDDIQ",
+         },
+         {
+            text: "Saya menerima kritik sebagai bentuk amanah untuk berkembang.",
+            type: "AMANAH",
+         },
+         {
+            text: "Saya menggunakannya sebagai data untuk memperbaiki sistem.",
+            type: "FATHANAH",
+         },
+         {
+            text: "Saya mengajak berdiskusi agar terjadi pemahaman bersama.",
+            type: "TABLIGH",
+         },
+      ],
+   },
+   {
+      question: "Dalam memimpin sebuah proyek baru...",
+      options: [
+         {
+            text: "Saya fokus menjaga integritas proses sejak awal.",
+            type: "SIDDIQ",
+         },
+         {
+            text: "Saya memastikan setiap tugas memiliki penanggung jawab yang jelas.",
+            type: "AMANAH",
+         },
+         {
+            text: "Saya membuat roadmap dan target yang terukur.",
+            type: "FATHANAH",
+         },
+         {
+            text: "Saya memastikan visi proyek dipahami seluruh anggota.",
+            type: "TABLIGH",
+         },
+      ],
+   },
+];
+
+const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
+   Astro.props;
+---
+
+<MainLayout title="Home">
+   <section id="beranda" class="relative min-h-screen overflow-hidden">
+      <div
+         class="absolute inset-0 flex items-center justify-center translate-y-[-10%] md:translate-y-[-8%] z-1"
+      >
+         <div class="text-center px-4 w-full">
+            <h1
+               class="font-judul font-bold mx-auto w-full lg:w-[60%] text-2xl leading-9 md:text-4xl lg:text-6xl lg:leading-20"
+            >
+               Bangun Kepemimpinan yang Berintegritas dan Bernilai Ibadah
+            </h1>
+            <p
+               class="font-text font-medium mx-auto w-full sm:w-[80%] lg:w-[62%] text-base md:text-[1.2rem] mt-4"
+            >
+               Belajar membangun kepemimpinan yang berintegritas, memberi
+               manfaat, dan relevan dengan tantangan masa kini melalui teladan
+               Rasulullah ﷺ dan para sahabat.
+            </p>
+
+            <a
+               class="inline-block px-1 py-1 bg-primary hover:bg-primary-700 rounded-full mt-6 hover:scale-105 transition-all duration-300"
+               href=""
+            >
+               <div
+                  class="px-6 py-2 md:px-8 md:py-1 border-2 border-dashed border-background text-white text-lg md:text-xl font-semibold font-text rounded-full"
+               >
+                  Eksplorasi Nilai
+               </div>
+            </a>
+         </div>
+      </div>
+
+      <div
+         class="absolute bottom-0 left-0 w-full h-50 md:h-80 overflow-hidden z-0"
+      >
+         <img
+            src="../images/gunung.svg"
+            alt=""
+            class="w-full h-full align-bottom object-cover object-top shadow-2xl"
+         />
+      </div>
+
+      <img
+         src="../images/pohon1.svg"
+         alt=""
+         class="absolute bottom-40 -left-5 w-16 md:bottom-72 md:-left-20 md:w-60 z-10"
+      />
+      <img
+         src="../images/pohon1.svg"
+         alt=""
+         class="absolute bottom-35 left-10 w-12 md:bottom-64 md:left-40 md:w-32 z-10"
+      />
+      <img
+         src="../images/pohon1.svg"
+         alt=""
+         class="absolute bottom-26 right-20 w-12 md:bottom-34 md:left-220 md:w-32 z-10"
+      />
+      <img
+         src="../images/pohon2.svg"
+         alt=""
+         class="absolute bottom-34 right-0 w-20 md:bottom-44 md:w-80 z-10"
+      />
+      <img
+         src="../images/unta.svg"
+         alt=""
+         class="absolute bottom-38 left-6 rotate-0 w-12 md:bottom-69 md:left-28 md:w-32 z-10"
+      />
+      <img
+         src="../images/unta.svg"
+         alt=""
+         class="absolute bottom-28 left-[40%] rotate-8 w-12 md:bottom-39 md:left-152 md:w-32 z-10"
+      />
+   </section>
+
+   <!-- Pilar Karakter -->
+
+   <section class="relative min-h-screen overflow-hidden bg-text">
+      <div
+         class="container mx-auto px-4 py-4 flex flex-col justify-center min-h-screen"
+      >
+         <!-- Header -->
+         <div class="text-center mb-10 md:mb-12">
+            <h2
+               class="text-3xl md:text-5xl font-judul font-bold text-background mb-4"
+            >
+               4 Pilar Karakter Pemimpin
+            </h2>
+
+            <p
+               class="text-background font-text text-sm md:text-base max-w-2xl mx-auto px-2"
+            >
+               Nilai inti yang menjadi fondasi kepemimpinan Rasulullah ﷺ dan
+               para sahabat, relevan untuk menjawab tantangan kepemimpinan masa
+               kini.
+            </p>
+         </div>
+
+         <!-- Cards -->
+         <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6"
+         >
+            <!-- Card 1 -->
+            <div
+               class="group relative overflow-hidden rounded-2xl shadow-lg min-h-80 md:min-h-80"
+            >
+               <!-- Background Image -->
+               <img
+                  src="https://tse3.mm.bing.net/th/id/OIP.uBJxuZzz1tgJBs2_OEbyDAHaE8?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  alt="Siddiq"
+                  class="absolute inset-0 w-full h-full object-cover transition-all duration-700 md:group-hover:scale-110"
+               />
+
+               <!-- Overlay -->
+               <div
+                  class="absolute inset-0 bg-black/40 md:group-hover:bg-black/65 transition-all duration-700"
+               >
+               </div>
+
+               <!-- Content -->
+               <div
+                  class="relative z-10 flex flex-col justify-end h-full p-5 md:p-6 text-background"
+               >
+                  <div
+                     class="transition-all duration-500 md:group-hover:-translate-y-4"
+                  >
+                     <h3
+                        class="text-xl md:text-2xl font-judul text-primary-200 font-bold mb-2"
+                     >
+                        SIDDIQ
+                     </h3>
+
+                     <p class="text-background/80">The Integrity</p>
+                  </div>
+
+                  <div
+                     class="mt-4 max-h-40 opacity-100 md:max-h-0 md:opacity-0 overflow-hidden transition-all duration-500 md:group-hover:max-h-40 md:group-hover:opacity-100"
+                  >
+                     <p class="font-semibold mb-2">Integritas Tanpa Batas</p>
+
+                     <p class="text-sm text-background/90 leading-relaxed">
+                        Pemimpin Islam itu satunya kata dan perbuatan. Di era
+                        manipulasi data dan pencitraan, integritas adalah mata
+                        uang tertinggi.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+               class="group relative overflow-hidden rounded-2xl shadow-lg min-h-80 md:min-h-80"
+            >
+               <!-- Background Image -->
+               <img
+                  src="https://tse2.mm.bing.net/th/id/OIP.il25YXIaWw7wLVc6wSnPyAHaEK?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  alt="Siddiq"
+                  class="absolute inset-0 w-full h-full object-cover transition-all duration-700 md:group-hover:scale-110"
+               />
+
+               <!-- Overlay -->
+               <div
+                  class="absolute inset-0 bg-black/40 md:group-hover:bg-black/65 transition-all duration-700"
+               >
+               </div>
+
+               <!-- Content -->
+               <div
+                  class="relative z-10 flex flex-col justify-end h-full p-5 md:p-6 text-background"
+               >
+                  <div
+                     class="transition-all duration-500 md:group-hover:-translate-y-4"
+                  >
+                     <h3
+                        class="text-xl md:text-2xl font-judul text-secondary-200 font-bold mb-2"
+                     >
+                        AMANAH
+                     </h3>
+
+                     <p class="text-background/80">The Responsibility</p>
+                  </div>
+
+                  <div
+                     class="mt-4 max-h-40 opacity-100 md:max-h-0 md:opacity-0 overflow-hidden transition-all duration-500 md:group-hover:max-h-40 md:group-hover:opacity-100"
+                  >
+                     <p class="font-semibold mb-2">Akuntabilitas Radikal</p>
+
+                     <p class="text-sm text-background/90 leading-relaxed">
+                        Jabatan bukan fasilitas atau panggung validasi,
+                        melainkan beban tanggung jawab. Berani pasang badan
+                        untuk tim dan transparan dalam setiap keputusan.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+               class="group relative overflow-hidden rounded-2xl shadow-lg min-h-80 md:min-h-80"
+            >
+               <!-- Background Image -->
+               <img
+                  src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2023/01/06/diskusijpg-20230106103854.jpg"
+                  alt="Siddiq"
+                  class="absolute inset-0 w-full h-full object-cover transition-all duration-700 md:group-hover:scale-110"
+               />
+
+               <!-- Overlay -->
+               <div
+                  class="absolute inset-0 bg-black/40 md:group-hover:bg-black/65 transition-all duration-700"
+               >
+               </div>
+
+               <!-- Content -->
+               <div
+                  class="relative z-10 flex flex-col justify-end h-full p-5 md:p-6 text-background"
+               >
+                  <div
+                     class="transition-all duration-500 md:group-hover:-translate-y-4"
+                  >
+                     <h3
+                        class="text-xl md:text-2xl font-judul text-accent-300 font-bold mb-2"
+                     >
+                        FATHANAH
+                     </h3>
+
+                     <p class="text-background/80">The Visionary</p>
+                  </div>
+
+                  <div
+                     class="mt-4 max-h-40 opacity-100 md:max-h-0 md:opacity-0 overflow-hidden transition-all duration-500 md:group-hover:max-h-40 md:group-hover:opacity-100"
+                  >
+                     <p class="font-semibold mb-2">Kecerdasan Strategis</p>
+
+                     <p class="text-sm text-background/90 leading-relaxed">
+                        Nggak cuma modal niat baik, pemimpin wajib cerdas,
+                        inovatif, dan taktis membaca situasi (data-driven).
+                        Selalu punya Plan B saat krisis melanda.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+               class="group relative overflow-hidden rounded-2xl shadow-lg min-h-80 cursor-pointer"
+            >
+               <!-- Background Image -->
+               <img
+                  src="https://1.bp.blogspot.com/-GBacIp7qTJ0/XcIe9xuNhjI/AAAAAAAARog/T2JFWxmCkgkXIM_LiYSBvNrcUTg-y9DagCLcBGAsYHQ/s1600/berani%2Bmaju%2Bdi%2Bdepan%2Bkelas.JPG"
+                  alt="Siddiq"
+                  class="absolute inset-0 w-full h-full object-cover transition-all duration-700 md:group-hover:scale-110"
+               />
+
+               <!-- Overlay -->
+               <div
+                  class="absolute inset-0 bg-black/40 md:group-hover:bg-black/65 transition-all duration-700"
+               >
+               </div>
+
+               <!-- Content -->
+               <div
+                  class="relative z-10 flex flex-col justify-end h-full p-5 md:p-6 text-background"
+               >
+                  <div
+                     class="transition-all duration-500 md:group-hover:-translate-y-4"
+                  >
+                     <h3
+                        class="text-xl md:text-2xl font-judul text-primary-200 font-bold mb-2"
+                     >
+                        TABLIGH
+                     </h3>
+
+                     <p class="text-background/80">The Influencer</p>
+                  </div>
+
+                  <div
+                     class="mt-4 max-h-40 opacity-100 md:max-h-0 md:opacity-0 overflow-hidden transition-all duration-500 md:group-hover:max-h-40 md:group-hover:opacity-100"
+                  >
+                     <p class="font-semibold mb-2">Komunikasi Empatis</p>
+
+                     <p class="text-sm text-background/90 leading-relaxed">
+                        Kemampuan menyampaikan visi dengan jelas, jujur, dan
+                        menginspirasi. Bukan dengan cara memerintah secara
+                        kasar, tapi merangkul lewat komunikasi dua arah.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Galeri -->
+   <section
+      class="relative min-h-screen overflow-hidden bg-background flex flex-col justify-center py-16"
+   >
+      <div class="container mx-auto px-4 w-full">
+         <div
+            class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 max-w-6xl mx-auto"
+         >
+            <div class="text-left max-w-2xl">
+               <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
+                  Galeri Tokoh & Studi Kasus
+               </h2>
+               <p class="text-text-600">
+                  Belajar dari keputusan-keputusan besar para tokoh Islam yang
+                  membuktikan bahwa kepemimpinan bukan hanya soal teori, tetapi
+                  keberanian mengambil tindakan yang tepat.
+               </p>
+            </div>
+
+            <div class="hidden md:flex gap-3 mt-6 md:mt-0">
+               <button
+                  id="prev-btn"
+                  class="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 text-text transition shadow-sm cursor-pointer"
+                  aria-label="Previous"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     class="w-5 h-5"
+                  >
+                     <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                  </svg>
+               </button>
+               <button
+                  id="next-btn"
+                  class="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 text-text transition shadow-sm cursor-pointer"
+                  aria-label="Next"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     class="w-5 h-5"
+                  >
+                     <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                  </svg>
+               </button>
+            </div>
+         </div>
+
+         <div class="relative max-w-7xl mx-auto">
+            <div
+               class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-r from-background to-transparent z-20 pointer-events-none"
+            >
+            </div>
+
+            <div
+               class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-l from-background to-transparent z-20 pointer-events-none"
+            >
+            </div>
+
+            <div
+               id="carousel-container"
+               class="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-12 pt-4 scroll-smooth select-none cursor-grab active:cursor-grabbing px-[10%] md:px-[35%]"
+               style="scrollbar-width: none; -ms-overflow-style: none;"
+            >
+               <article
+                  class="carousel-card snap-center shrink-0 w-[75vw] sm:w-100 bg-white rounded-3xl border border-gray-200 p-8 shadow-sm transition-all duration-500 origin-center"
+               >
+                  <div class="mb-5">
+                     <span
+                        class="text-xs font-semibold tracking-wider uppercase text-primary"
+                        >Studi Kasus #01</span
+                     >
+                  </div>
+                  <h3 class="text-xl font-bold text-text leading-snug mb-5">
+                     Manajemen Konflik ala Rasulullah ﷺ
+                     <span
+                        class="block text-base font-medium text-text-500 mt-1"
+                        >(Krisis Hajar Aswad)</span
+                     >
+                  </h3>
+                  <div class="space-y-4">
+                     <div>
+                        <p class="text-sm font-semibold text-text mb-2">
+                           Kisah Singkat
+                        </p>
+                        <p class="text-text-600 leading-relaxed text-sm">
+                           Ketika para pemimpin Quraisy berselisih tentang siapa
+                           yang berhak meletakkan Hajar Aswad, Rasulullah ﷺ
+                           mengajak mereka bekerja sama sehingga tidak ada pihak
+                           yang merasa dirugikan.
+                        </p>
+                     </div>
+                     <div class="border-l-4 border-primary pl-4">
+                        <p class="text-sm font-semibold text-primary mb-2">
+                           Pelajaran yang Bisa Dipetik
+                        </p>
+                        <p class="italic text-text-700 leading-relaxed text-sm">
+                           Saat menghadapi konflik, carilah solusi yang adil dan
+                           melibatkan semua pihak.
+                        </p>
+                     </div>
+                  </div>
+               </article>
+
+               <article
+                  class="carousel-card snap-center shrink-0 w-[75vw] sm:w-100 bg-white rounded-3xl border border-gray-200 p-8 shadow-sm transition-all duration-500 origin-center"
+               >
+                  <div class="mb-5">
+                     <span
+                        class="text-xs font-semibold tracking-wider uppercase text-secondary"
+                        >Studi Kasus #02</span
+                     >
+                  </div>
+                  <h3 class="text-xl font-bold text-text leading-snug mb-5">
+                     Transparansi & Kerendahan Hati
+                     <span
+                        class="block text-base font-medium text-text-500 mt-1"
+                        >Umar bin Khattab</span
+                     >
+                  </h3>
+                  <div class="space-y-4">
+                     <div>
+                        <p class="text-sm font-semibold text-text mb-2">
+                           Kisah Singkat
+                        </p>
+                        <p class="text-text-600 leading-relaxed text-sm">
+                           Umar bin Khattab pernah menerima kritik dari seorang
+                           wanita di depan banyak orang. Beliau tidak marah,
+                           tetapi mengakui bahwa pendapat wanita tersebut benar.
+                        </p>
+                     </div>
+                     <div class="border-l-4 border-secondary pl-4">
+                        <p class="text-sm font-semibold text-secondary mb-2">
+                           Pelajaran yang Bisa Dipetik
+                        </p>
+                        <p class="italic text-text-700 leading-relaxed text-sm">
+                           Pemimpin yang baik tidak gengsi menerima kritik dan
+                           berani mengakui kesalahan.
+                        </p>
+                     </div>
+                  </div>
+               </article>
+
+               <article
+                  class="carousel-card snap-center shrink-0 w-[75vw] sm:w-100 bg-white rounded-3xl border border-gray-200 p-8 shadow-sm transition-all duration-500 origin-center"
+               >
+                  <div class="mb-5">
+                     <span
+                        class="text-xs font-semibold tracking-wider uppercase text-accent"
+                        >Studi Kasus #03</span
+                     >
+                  </div>
+                  <h3 class="text-xl font-bold text-text leading-snug mb-5">
+                     Manajemen Proyek Skala Besar
+                     <span
+                        class="block text-base font-medium text-text-500 mt-1"
+                        >Muhammad Al-Fatih</span
+                     >
+                  </h3>
+                  <div class="space-y-4">
+                     <div>
+                        <p class="text-sm font-semibold text-text mb-2">
+                           Kisah Singkat
+                        </p>
+                        <p class="text-text-600 leading-relaxed text-sm">
+                           Untuk menaklukkan Konstantinopel, Muhammad Al-Fatih
+                           memindahkan puluhan kapal melalui jalur darat sebagai
+                           strategi yang tidak pernah diduga lawan.
+                        </p>
+                     </div>
+                     <div class="border-l-4 border-accent pl-4">
+                        <p class="text-sm font-semibold text-accent mb-2">
+                           Pelajaran yang Bisa Dipetik
+                        </p>
+                        <p class="italic text-text-700 leading-relaxed text-sm">
+                           Berani mencoba cara baru dan berpikir kreatif dapat
+                           membantu menyelesaikan tantangan besar.
+                        </p>
+                     </div>
+                  </div>
+               </article>
+            </div>
+         </div>
+
+         <div class="text-center md:hidden text-xs text-text font-medium mt-2">
+            ← Geser untuk melihat studi kasus lain →
+         </div>
+      </div>
+   </section>
+
+   <script>
+      const slider = document.getElementById("carousel-container");
+      const cards = document.querySelectorAll(".carousel-card");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      // 1. Logika Utama: Deteksi Card di Tengah (Fokus)
+      const updateFocus = () => {
+         const containerCenter =
+            slider.getBoundingClientRect().left + slider.offsetWidth / 2;
+
+         cards.forEach((card) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+
+            // Hitung jarak card dari titik tengah kontainer
+            const distanceFromCenter = Math.abs(containerCenter - cardCenter);
+
+            // Jika card berada dekat dengan titik tengah (toleransi lebar kartu setengah)
+            if (distanceFromCenter < cardRect.width / 2) {
+               card.classList.remove("opacity-40", "scale-95", "shadow-sm");
+               card.classList.add(
+                  "opacity-100",
+                  "scale-100",
+                  "shadow-xl",
+                  "z-10",
+               );
+            } else {
+               card.classList.remove(
+                  "opacity-100",
+                  "scale-100",
+                  "shadow-xl",
+                  "z-10",
+               );
+               card.classList.add("opacity-40", "scale-95", "shadow-sm");
+            }
+         });
+      };
+
+      // Jalankan fungsi saat di-scroll dan saat pertama kali halaman dimuat
+      slider.addEventListener("scroll", updateFocus);
+      window.addEventListener("resize", updateFocus);
+      // Beri jeda sedikit saat load agar posisi kalkulasi presisi
+      setTimeout(updateFocus, 100);
+
+      // 2. Navigasi Tombol
+      if (prevBtn && nextBtn) {
+         prevBtn.addEventListener("click", () => {
+            const cardWidth = cards[0].offsetWidth + 32; // lebar kartu + gap
+            slider.scrollBy({ left: -cardWidth, behavior: "smooth" });
+         });
+         nextBtn.addEventListener("click", () => {
+            const cardWidth = cards[0].offsetWidth + 32;
+            slider.scrollBy({ left: cardWidth, behavior: "smooth" });
+         });
+      }
+
+      // 3. Fitur Drag Mouse (Desktop)
+      slider.addEventListener("mousedown", (e) => {
+         isDown = true;
+         slider.classList.remove("scroll-smooth");
+         startX = e.pageX - slider.offsetLeft;
+         scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener("mouseleave", () => {
+         isDown = false;
+      });
+
+      slider.addEventListener("mouseup", () => {
+         isDown = false;
+         slider.classList.add("scroll-smooth");
+      });
+
+      slider.addEventListener("mousemove", (e) => {
+         if (!isDown) return;
+         e.preventDefault();
+         const x = e.pageX - slider.offsetLeft;
+         const walk = (x - startX) * 1.5;
+         slider.scrollLeft = scrollLeft - walk;
+      });
+   </script>
+
+   <style>
+      #carousel-container::-webkit-scrollbar {
+         display: none;
+      }
+      /* Mengembalikan area clip-path agar tumpukan efek shadow keluar dari batas kontainer secara natural */
+      #carousel-container {
+         clip-path: inset(-20px 0px -40px 0px);
+      }
+      /* Menambahkan padding semu di awal dan akhir agar kartu pertama & terakhir bisa berada tepat di tengah */
+      #carousel-container::before,
+      #carousel-container::after {
+         content: "";
+         flex-shrink: 0;
+         width: 10vw;
+      }
+      @media (min-width: 640px) {
+         #carousel-container::before,
+         #carousel-container::after {
+            width: 25vw;
+         }
+      }
+   </style>
+
+   <!-- Artikel Edukasi Pendek -->
+
+   <section class="relative min-h-screen overflow-hidden bg-background">
+      <div
+         class="container mx-auto px-4 max-w-4xl flex flex-col justify-center min-h-screen"
+      >
+         <!-- Header -->
+         <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
+               Artikel Edukasi Pendek
+            </h2>
+
+            <p class="text-text-600 max-w-2xl mx-auto">
+               Insight praktis yang dapat langsung diterapkan dalam organisasi,
+               komunitas, maupun kehidupan profesional sehari-hari.
+            </p>
+         </div>
+
+         <!-- Accordion -->
+         <div class="space-y-4">
+            <!-- Artikel 1 -->
+            <details
+               class="group bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md"
+            >
+               <summary
+                  class="flex items-center justify-between cursor-pointer list-none p-6 font-bold text-lg text-text hover:text-primary transition-colors duration-300"
+               >
+                  <span>
+                     Micromanagement vs Syura: Mengapa Bos Suka Ngatur dan Islam
+                     Melarangnya?
+                  </span>
+
+                  <span
+                     class="text-2xl transition-transform duration-300 group-open:rotate-45"
+                  >
+                     +
+                  </span>
+               </summary>
+
+               <div class="px-6 pb-6">
+                  <div class="border-t border-gray-100 pt-4">
+                     <p class="text-text-600 leading-relaxed">
+                        Membahas pentingnya delegasi tugas dan konsep musyawarah
+                        dalam tim, agar anggota merasa dihargai, dipercaya, dan
+                        memiliki ruang untuk berkembang. Pemimpin yang baik
+                        tidak mengontrol setiap detail pekerjaan, tetapi
+                        menciptakan lingkungan yang memungkinkan tim bertanggung
+                        jawab atas keputusan dan hasil yang dicapai bersama.
+                     </p>
+                  </div>
+               </div>
+            </details>
+
+            <!-- Artikel 2 -->
+            <details
+               class="group bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md"
+            >
+               <summary
+                  class="flex items-center justify-between cursor-pointer list-none p-6 font-bold text-lg text-text hover:text-secondary transition-colors duration-300"
+               >
+                  <span>
+                     Mental Pahlawan Perang Khandaq: Menjaga Motivasi Tim Saat
+                     Dihantam Krisis Silih Berganti
+                  </span>
+
+                  <span
+                     class="text-2xl transition-transform duration-300 group-open:rotate-45"
+                  >
+                     +
+                  </span>
+               </summary>
+
+               <div class="px-6 pb-6">
+                  <div class="border-t border-gray-100 pt-4">
+                     <p class="text-text-600 leading-relaxed">
+                        Ketika organisasi berada dalam tekanan besar, pemimpin
+                        harus menjadi sumber ketenangan dan harapan. Artikel ini
+                        membahas cara menjaga kesehatan mental tim, membangun
+                        optimisme yang realistis, serta memastikan setiap
+                        anggota tetap fokus pada tujuan meskipun menghadapi
+                        banyak tantangan dari luar.
+                     </p>
+                  </div>
+               </div>
+            </details>
+
+            <!-- Artikel 3 -->
+            <details
+               class="group bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md"
+            >
+               <summary
+                  class="flex items-center justify-between cursor-pointer list-none p-6 font-bold text-lg text-text hover:text-accent transition-colors duration-300"
+               >
+                  <span>
+                     Public Speaking Komunikatif: Belajar dari Khutbah yang
+                     Menggerakkan Hati
+                  </span>
+
+                  <span
+                     class="text-2xl transition-transform duration-300 group-open:rotate-45"
+                  >
+                     +
+                  </span>
+               </summary>
+
+               <div class="px-6 pb-6">
+                  <div class="border-t border-gray-100 pt-4">
+                     <p class="text-text-600 leading-relaxed">
+                        Pelajari bagaimana menyampaikan pesan dengan jelas,
+                        terstruktur, penuh empati, dan berbasis fakta. Kemampuan
+                        berbicara yang baik bukan tentang terdengar paling
+                        pintar, tetapi bagaimana membuat audiens memahami,
+                        tergerak, dan terdorong untuk mengambil tindakan
+                        positif.
+                     </p>
+                  </div>
+               </div>
+            </details>
+         </div>
+      </div>
+   </section>
+
+   <!-- Quiz -->
+
+   <section class="relative min-h-screen overflow-hidden bg-background">
+      <!-- Teks berjalan -->
+      <div
+         class="w-full py-12 overflow-hidden flex items-center justify-center"
+      >
+         <div
+            class="w-[115vw] min-w-[115vw] transform -rotate-2 bg-[#6E8570] py-2 md:py-3 flex overflow-hidden select-none"
+         >
+            <div
+               class="marquee-track min-w-full flex shrink-0 items-center justify-around gap-6 md:gap-2 whitespace-nowrap text-[#F1EAD9] font-bold text-lg md:text-xl uppercase"
+            >
+               <span>{teksUtama}</span>
+               <span>{slogan}</span>
+            </div>
+            <div
+               class="marquee-track min-w-full flex shrink-0 items-center justify-around gap-6 md:gap-2 whitespace-nowrap text-[#F1EAD9] font-bold text-lg md:text-xl uppercase"
+            >
+               <span>{teksUtama}</span>
+               <span>{slogan}</span>
+            </div>
+         </div>
+      </div>
+
+      <section
+         class="py-20 bg-background flex flex-col justify-center min-h-screen"
+      >
+         <div class="container mx-auto px-4 max-w-3xl">
+            <div
+               id="quiz-container"
+               class="bg-white border border-gray-200 rounded-3xl shadow-lg p-8 md:p-10"
+            >
+               <!-- START SCREEN -->
+               <div id="start-screen" class="text-center">
+                  <div
+                     class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center"
+                  >
+                     <i class="ri-compass-discover-line text-4xl text-primary"
+                     ></i>
+                  </div>
+
+                  <span
+                     class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
+                  >
+                     <i class="ri-timer-line"></i>
+                     5 Pertanyaan • ± 1 Menit
+                  </span>
+
+                  <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
+                     Gaya Kepemimpinan yang Paling Dekat dengan Dirimu
+                  </h2>
+                  <p
+                     class="text-text-600 max-w-xl mx-auto leading-relaxed mb-8"
+                  >
+                     Tidak ada jawaban benar atau salah. Pilih respons yang
+                     paling menggambarkan dirimu saat menghadapi situasi
+                     sehari-hari, lalu lihat kecenderungan gaya kepemimpinan
+                     yang muncul.
+                  </p>
+
+                  <button
+                     id="start-btn"
+                     class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                  >
+                     <i class="ri-arrow-right-line"></i>
+                     Mulai
+                  </button>
+               </div>
+
+               <!-- QUIZ SCREEN -->
+               <div id="quiz-screen" class="hidden">
+                  <div class="mb-8">
+                     <div class="flex justify-between items-center mb-3">
+                        <div
+                           class="flex items-center gap-2 text-sm text-text-500"
+                        >
+                           <i class="ri-file-list-3-line"></i>
+                           <span>Pertanyaan</span>
+                        </div>
+
+                        <span
+                           id="progress-text"
+                           class="text-sm font-medium text-primary"
+                        >
+                           1 / 5
+                        </span>
+                     </div>
+
+                     <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                           id="progress-bar"
+                           class="h-full bg-primary transition-all duration-500"
+                           style="width:20%"
+                        >
+                        </div>
+                     </div>
+                  </div>
+
+                  <h3
+                     id="question-title"
+                     class="text-2xl font-bold text-text mb-6"
+                  >
+                  </h3>
+
+                  <div id="answers" class="grid gap-3"></div>
+               </div>
+
+               <!-- RESULT SCREEN -->
+               <!-- RESULT SCREEN -->
+               <div id="result-screen" class="hidden">
+                  <div class="text-center">
+                     <div
+                        class="w-24 h-24 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-6"
+                     >
+                        <i class="ri-award-line text-5xl text-primary"></i>
+                     </div>
+
+                     <span
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
+                     >
+                        <i class="ri-star-line"></i>
+                        Hasil Assessment
+                     </span>
+
+                     <h3
+                        id="result-title"
+                        class="text-3xl md:text-5xl font-bold text-text mb-3"
+                     >
+                     </h3>
+
+                     <p
+                        id="result-subtitle"
+                        class="text-base md:text-lg font-semibold text-primary mb-6"
+                     >
+                     </p>
+
+                     <p
+                        id="result-description"
+                        class="max-w-2xl mx-auto text-text-600 leading-relaxed"
+                     >
+                     </p>
+
+                     <button
+                        id="restart-btn"
+                        class="mt-8 inline-flex items-center gap-2 border border-primary text-primary
+                         px-6 py-3 rounded-xl
+                         active:scale-95
+                         hover:bg-primary hover:text-white
+                         transition-all duration-300"
+                     >
+                        <i class="ri-refresh-line"></i>
+                        Coba Lagi
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </section>
+
+   <script define:vars={{ questions }}>
+      const startScreen = document.getElementById("start-screen");
+      const quizScreen = document.getElementById("quiz-screen");
+      const resultScreen = document.getElementById("result-screen");
+
+      const startBtn = document.getElementById("start-btn");
+      const restartBtn = document.getElementById("restart-btn");
+
+      const questionTitle = document.getElementById("question-title");
+      const answersContainer = document.getElementById("answers");
+
+      const progressText = document.getElementById("progress-text");
+      const progressBar = document.getElementById("progress-bar");
+
+      let currentQuestion = 0;
+
+      let scores = {
+         SIDDIQ: 0,
+         AMANAH: 0,
+         FATHANAH: 0,
+         TABLIGH: 0,
+      };
+
+      const results = {
+         SIDDIQ: {
+            subtitle: "The Principled Leader",
+            description:
+               "Kamu adalah pemimpin yang menjunjung tinggi integritas, kejujuran, dan konsistensi antara ucapan dan tindakan.",
+         },
+         AMANAH: {
+            subtitle: "The Guardian Leader",
+            description:
+               "Kamu memiliki rasa tanggung jawab yang tinggi dan dipercaya menjaga amanah serta kepentingan tim.",
+         },
+         FATHANAH: {
+            subtitle: "The Strategist Leader",
+            description:
+               "Kamu unggul dalam berpikir strategis, menganalisis situasi, dan menemukan solusi inovatif.",
+         },
+         TABLIGH: {
+            subtitle: "The Inspiring Communicator",
+            description:
+               "Kamu mampu menyampaikan ide dengan jelas, membangun hubungan yang kuat, dan menginspirasi orang lain.",
+         },
+      };
+
+      function renderQuestion() {
+         const q = questions[currentQuestion];
+
+         questionTitle.textContent = q.question;
+
+         progressText.textContent = `${currentQuestion + 1} / ${questions.length}`;
+
+         progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
+
+         answersContainer.innerHTML = "";
+
+         q.options.forEach((option) => {
+            const button = document.createElement("button");
+
+            button.className =
+               "w-full text-left p-4 rounded-xl border border-gray-200 hover:border-primary hover:bg-primary-50 active:scale-[0.98] active:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all duration-200";
+
+            button.textContent = option.text;
+
+            button.addEventListener("click", () => {
+               scores[option.type]++;
+
+               currentQuestion++;
+
+               if (currentQuestion < questions.length) {
+                  renderQuestion();
+               } else {
+                  showResult();
+               }
+            });
+
+            answersContainer.appendChild(button);
+         });
+      }
+
+      function showResult() {
+         quizScreen.classList.add("hidden");
+         resultScreen.classList.remove("hidden");
+
+         const winner = Object.keys(scores).reduce((a, b) =>
+            scores[a] > scores[b] ? a : b,
+         );
+
+         document.getElementById("result-title").textContent = winner;
+         document.getElementById("result-subtitle").textContent =
+            results[winner].subtitle;
+
+         document.getElementById("result-description").textContent =
+            results[winner].description;
+      }
+
+      function resetQuiz() {
+         currentQuestion = 0;
+
+         scores = {
+            SIDDIQ: 0,
+            AMANAH: 0,
+            FATHANAH: 0,
+            TABLIGH: 0,
+         };
+
+         resultScreen.classList.add("hidden");
+         startScreen.classList.remove("hidden");
+      }
+
+      startBtn.addEventListener("click", () => {
+         startScreen.classList.add("hidden");
+         quizScreen.classList.remove("hidden");
+         renderQuestion();
+      });
+
+      restartBtn.addEventListener("click", resetQuiz);
+   </script>
+
+   <style>
+      /* Animasi khusus lokal untuk komponen ini saja */
+      .marquee-track {
+         animation: marquee 20s linear infinite;
+      }
+
+      @keyframes marquee {
+         0% {
+            transform: translateX(0%);
+         }
+         100% {
+            transform: translateX(-100%);
+         }
+      }
+   </style>
+</MainLayout>
