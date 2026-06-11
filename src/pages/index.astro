@@ -113,7 +113,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
    Astro.props;
 ---
 
-<MainLayout title="Home">
+<MainLayout>
    <section id="beranda" class="relative min-h-screen overflow-hidden">
       <div
          class="absolute inset-0 flex items-center justify-center translate-y-[-10%] md:translate-y-[-8%] z-1"
@@ -189,7 +189,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
 
    <!-- Pilar Karakter -->
 
-   <section class="relative min-h-screen overflow-hidden bg-text">
+   <section id="pilarkarakter" class="relative min-h-screen overflow-hidden bg-text">
       <div
          class="container mx-auto px-4 py-4 flex flex-col justify-center min-h-screen"
       >
@@ -406,7 +406,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
    </section>
 
    <!-- Galeri -->
-   <section
+   <section id="galeri"
       class="relative min-h-screen overflow-hidden bg-background flex flex-col justify-center py-16"
    >
       <div class="container mx-auto px-4 w-full">
@@ -415,7 +415,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
          >
             <div class="text-left max-w-2xl">
                <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
-                  Galeri Tokoh & Studi Kasus
+                  Keteladanan
                </h2>
                <p class="text-text-600">
                   Belajar dari keputusan-keputusan besar para tokoh Islam yang
@@ -720,7 +720,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
 
    <!-- Artikel Edukasi Pendek -->
 
-   <section class="relative min-h-screen overflow-hidden bg-background">
+   <section id="artikel" class="relative min-h-screen overflow-hidden bg-background">
       <div
          class="container mx-auto px-4 max-w-4xl flex flex-col justify-center min-h-screen"
       >
@@ -842,7 +842,7 @@ const { teksUtama = "PEMIMPIN MUDA", slogan = "BERANI, INOVATIF, BERAKSI" } =
 
    <!-- Quiz -->
 
-   <section class="relative min-h-screen overflow-hidden bg-background">
+   <section id="cekkaraktermu" class="relative min-h-screen overflow-hidden bg-background">
       <!-- Teks berjalan -->
       <div
          class="w-full py-12 overflow-hidden flex items-center justify-center"
